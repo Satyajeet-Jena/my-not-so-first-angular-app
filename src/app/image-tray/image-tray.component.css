@@ -1,0 +1,19 @@
+
+.tray {
+	flex-flow: row wrap;
+	margin-left: 15%;
+	margin-right: 5%;
+}
+.img-wrapper {
+	margin-right: 5px;
+	display: inline-block;
+	box-sizing: border-box;
+
+	max-width: 30%;
+	max-height: 40%;
+}
+
+.tshirt {
+	width: 80%;
+	height: 40%;
+}
