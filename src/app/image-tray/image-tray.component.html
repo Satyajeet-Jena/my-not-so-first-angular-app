@@ -1,8 +1,10 @@
 <p>image-tray works!</p>
 <div class="tray">
-	<ul>
-  		<li *ngFor="let fruit of fruits">{{ fruit }}</li>
-	</ul>
-  		<div class="img-wrapper" *ngFor="let image of TShirtImages">
-  		<img class="tshirt" src= {{image}} alt="Tshirt nigga"/>
+	<div class="img-wrapper" *ngFor="let tshirt of TShirts">
+		<img class="tshirt" src= {{tshirt.path}} alt="{{tshirt.name}}"/>
+		<div class="overlay">
+			<p class="tshirt-text-top"> {{tshirt.name}}</p>
+    		<p class="tshirt-text-bottom">Cost: ₹{{tshirt.price}}</p>
+		</div>
+	</div>
 </div>

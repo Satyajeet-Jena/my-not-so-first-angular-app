@@ -1,19 +1,66 @@
-
 .tray {
-	flex-flow: row wrap;
-	margin-left: 15%;
-	margin-right: 5%;
-}
-.img-wrapper {
-	margin-right: 5px;
-	display: inline-block;
-	box-sizing: border-box;
-
-	max-width: 30%;
-	max-height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .tshirt {
-	width: 80%;
-	height: 40%;
+    width: 100%; 
+    height: auto; 
+    transition: transform 0.3s;
+}
+
+.img-wrapper {
+    margin: 5px ;
+    position: relative; 
+    display: inline-block;
+    box-sizing: border-box;
+    max-width: 30%;
+    max-height: 40%;
+    overflow: hidden; 
+}
+
+.img-wrapper:hover .tshirt {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex; 
+/*    justify-content: center;
+    align-items: center;*/
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0; 
+    transition: opacity 0.3s; 
+}
+
+.img-wrapper:hover .overlay {
+    opacity: 1; 
+}
+.tshirt-text-top {
+	margin: 0 !important;
+	position: inherit;
+	top: 0;
+	left: 0;
+    color: white;
+    font-size: 20px; 
+	text-align: left;
+	background-color: rgba(100, 100, 100, 0.5);
+}
+.tshirt-text-bottom {
+	margin: 0 !important;
+	position: inherit;
+	bottom: 0;
+	right: 0;
+    color: white;
+    font-size: 20px; 
+    text-align: right;
+    background-color: rgba(100, 100, 100, 0.5);
 }
